@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin: 15px 0px 15px 10px;
+    font-style: italic;
+    color: rgb(168, 143, 3);
+    transition: color 4s, transform 2s;
+    transition-timing-function: ease-in;
+}
+h1:hover{
+    color: rgb(255, 217, 0);
+    transform: skewX(20deg)
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 15px;
+}
+.meniu{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    color: green;
+    font-size: 20px;
+}
+.meniu-dropdown > h6{
+    font-size: 1rem;
+}
+.meniu-dropdown{
+    position: relative;
+    display: inline-block;
+}
+.meniu-dropdown > a{
+    display: block;
+}
+.continut-dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, #9E0404, #FF0E0E);
+    color: white;
+    padding: 1rem;
+    min-width: 12rem;
+    font-size: 1rem;
+    text-align: center;
+} 
+.meniu-dropdown:hover .continut-dropdown{
+    display: inline-block;
+}
+nav{
+    background-image: linear-gradient(to bottom, #9E0404, #FF0E0E);
+    color: white;
+    padding: 15px 0px;
+}
+.meniu-context{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.meniu-context > a{
+    color: white;
+    text-decoration: none;
+}
+.login-btn{
+    border-style: none;
+    border-radius: 10%;
+    color: white;
+    background-image: linear-gradient(to bottom, #115500, #09cf02);
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    margin: 1px;
+}
+.login-btn:hover{
+    background-image: linear-gradient(to bottom, #057601, #0dff05);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 2rem;
+}
+.thumbnail-articol{
+    background-image: linear-gradient(to bottom, #115500, #09cf02);
+    border: 0.2rem solid #005a08;
+    border-radius: 10%;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+.thumbnail-articol:hover{
+    background-image: linear-gradient(to bottom, #057601, #0dff05);
+}
+footer{
+    background-image: linear-gradient(to bottom, #9E0404, #FF0E0E);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+footer:hover::after{
+    content: " ~ 2022";
+}
+.bun-venit{
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 1.4rem;
+}
+.form-container{
+    background-color: #0000001d;
+    color: green;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 2rem 3rem;
+  }
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], textarea,  select{
+    width: 100%;
+    color: green;
+    padding: 10px 5px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.options{
+    margin: 5px 0px;
+}
+.link-inregistrare{
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 74, 0);
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.link-inregistrare:nth-of-type(even){
+    color: rgb(1, 151, 1);
+}
+@keyframes border-animation{
+    to{
+        border-color: rgb(0, 205, 0);
+        transform: rotateY(180deg);
+    }  
+}
+.meniu-form{
+    margin: 1.5rem 25%;
+    position: relative;
+    padding: 1rem;
+}
+.meniu-form::before{
+    content: "";
+    display: var(--displayMeniuForm, none);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid green;
+    border-radius: 50%;
+    z-index: -1;
+    animation-name: border-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out; 
+}
+.dynamicallyAddedClass{
+    box-shadow: #FF0E0E;
+}
+@media screen and (max-width: 800px){
+    .meniu{
+        display: none;
+        visibility: hidden;
+        position: absolute;
+    }
+    .grid-container{
+        grid-template-columns: auto;
+        margin: 2rem 15%;
+    }
+}

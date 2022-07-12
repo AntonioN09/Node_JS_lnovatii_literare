@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Articolele dvs</title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Inovații literare</h1>
+            <div class="meniu">
+                <div class="meniu-dropdown">
+                    <a>Misiune</a>
+                    <div class="continut-dropdown">
+                        <p>Misiunea noastra este de a asigura pe metoda eficienta
+                             pentru organizarea creatiilor literare</p>
+                    </div>
+                </div>
+                <div class="meniu-dropdown">
+                    <a>Ghid de utilizare</a>
+                    <div class="continut-dropdown">
+                        <p>Puteti sorta rapid creatiile literare dupa categorii</p>
+                    </div>
+                </div>
+                <div class="meniu-dropdown">
+                    <a>Contact</a>
+                    <div class="continut-dropdown">
+                        <p>inovatii-literare@gmail.ro</p>
+                    </div>
+                </div>
+            </div>
+            <form action="/logout?_method=delete" method="post">
+                <button class="login-btn">Log out</button>
+            </form>
+        </header>
+        <nav>
+            <div class="meniu-context">
+                <a href="./selectare_articol">Toate articolele</a>
+                <div class="meniu-dropdown">
+                    <a>Alege o categorie</a>
+                    <div class="continut-dropdown">
+                        <p>Momentan indisponibil</p>
+                    </div>
+                </div>
+                <a>Sorteaza dupa data scrierii</a>
+                <a href="./vizualizare_articol">Scrie un articol</a>
+            </div>
+        </nav>
+        <main class="grid-container">
+
+        </main>
+        <footer>&copy; Inovații literare ~ Năstase Antonio Inc.</footer>
+        <script src="./scripts/scripting2.js"></script>
+    </body>
+</html>

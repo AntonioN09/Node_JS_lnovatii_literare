@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Inovații literare</h1>
+            <div class="meniu">
+                <div class="meniu-dropdown">
+                    <a>Misiune</a>
+                    <div class="continut-dropdown">
+                        <p>Misiunea noastra este de a asigura pe metoda eficienta
+                             pentru organizarea creatiilor literare</p>
+                    </div>
+                </div>
+                <div class="meniu-dropdown">
+                    <a>Ghid de utilizare</a>
+                    <div class="continut-dropdown">
+                        <p>Puteti sorta rapid creatiile literare dupa categorii</p>
+                    </div>
+                </div>
+                <div class="meniu-dropdown">
+                    <a>Contact</a>
+                    <div class="continut-dropdown">
+                        <p>inovatii-literare@gmail.ro</p>
+                    </div>
+                </div>
+            </div>
+            <button class="login-btn">Log in</button>
+        </header>
+        <nav>
+           <p class="bun-venit">Bun venit la Inovații literare. Aici iti poti administra cu usurinta creatiile literare.</p> 
+        </nav>
+        <main class="form-container">
+            <% if (messages.error){ %>
+              <%= messages.error %>
+            <% } %>
+            <form action="/" method="post">
+                <label id="email-label" for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="Introduceti email" required>
+                <label id="password-label" for="password">Parola:</label>
+                <input id="password" name="password" type="password" placeholder="Introduceti parola" required>
+                <input class="login-btn" type="submit" id="submit">
+              </form>
+        </main>
+        <div class="meniu-form">
+            <a class="link-inregistrare" href="">Ati uitat parola? Apasati aici</a>
+            <a class="link-inregistrare" href="./inregistrare">Daca nu aveti cont, apasati aici</a>
+            <a class="link-inregistrare" href="">Termeni si conditii</a>
+            <a class="link-inregistrare" href="">Politica de confidentialitate</a>
+        </div>
+        <footer id="footer">&copy; Inovații literare ~ Năstase Antonio Inc.</footer>
+        <script src="./scripts/scripting1.js"></script>
+    </body>
+</html>
